@@ -14,7 +14,7 @@ public class AppRunner
         string cacheValue = "Hello, Redis!";
 
         // Absolute Expiration Relative To Now overrides Absolute Expiration if both are set.
-        var cacheConfig = new DistributedCacheEntryOptions() { AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10), AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(15) };
+        var cacheConfig = new DistributedCacheEntryOptions() { AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10), AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(5) };
 
         Console.WriteLine($"Current Datetime: {DateTimeOffset.Now}.");
         Console.WriteLine($"Absolute Expiration Relative To Now: {cacheConfig.AbsoluteExpirationRelativeToNow}.");
